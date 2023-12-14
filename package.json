@@ -1,26 +1,27 @@
 {
-  "name": "prettylogs",
-  "version": "0.0.0",
-  "description": "A logger package that makes your JS/TS logs look nicer.",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "logger",
-    "typescript",
-    "javascript",
-    "prettylogs",
-    "cleanlogs"
-  ],
-  "author": "Bardia Shafaee",
-  "license": "MIT",
-  "dependencies": {
-    "ts-node": "^10.9.2",
-    "tsc": "^2.0.4",
-    "typescript": "^5.3.3"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.2"
-  }
+	"name": "prettylogs",
+	"version": "0.0.0",
+	"description": "A logger package that makes your JS/TS logs look nicer.",
+	"main": "prettylogs.ts",
+	"scripts": {
+		"coverage": "jest --coverage",
+    "test": "ts-node tests/test-dir/index.ts"
+	},
+	"keywords": [
+		"logger",
+		"typescript",
+		"javascript",
+		"prettylogs",
+		"cleanlogs"
+	],
+	"author": "Bardia Shafaee",
+	"license": "MIT",
+	"dependencies": {
+		"ts-node": "^10.9.2",
+		"tsc": "^2.0.4",
+		"typescript": "^5.3.3"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2"
+	}
 }
