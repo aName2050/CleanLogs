@@ -2,7 +2,7 @@
     "name": "@aname2050/cleanlogs",
     "version": "0.0.1",
     "description": "A logger package that makes your JS/TS logs look nicer.",
-    "main": "src/prettylogs.ts",
+    "main": "./src/prettylogs.ts",
     "scripts": {
         "coverage": "jest --coverage",
         "test": "ts-node tests/test-dir/index.ts"
