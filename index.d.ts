@@ -1,1 +1,1 @@
-export function testFunction(): string;
+export function testFunction(): void;
