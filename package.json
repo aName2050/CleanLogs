@@ -1,6 +1,6 @@
 {
     "name": "@aname2050/cleanlogs",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A logger package that makes your JS/TS logs look nicer.",
     "main": "./src/prettylogs.ts",
     "scripts": {
