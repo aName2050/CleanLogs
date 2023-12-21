@@ -12,9 +12,9 @@ function getStack(): string {
 
         if (match) {
             const [filePath] = match;
-            stackInfo = `${getLastItem(filePath.split('\\'))?.split(':')[0]} L${
+            stackInfo = `${getLastItem(filePath.split('\\'))?.split(':')[0]}:${
                 filePath.split(':')[2]
-            }C${filePath.split(':')[3].replace(')', '')}`;
+            }`;
         }
     }
 

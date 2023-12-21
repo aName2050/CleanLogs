@@ -7,12 +7,12 @@ class Logger {
     private logType: LogType;
     private options: LogOptions;
 
-    private colors: object = {
-        log: '#222324',
-        error: '#960000',
-        warning: '#c4a61f',
-        info: '#035efc',
-        http: '#0000ff',
+    private colors = {
+        LOG: '#222324',
+        ERROR: '#960000',
+        WARNING: '#c4a61f',
+        INFO: '#035efc',
+        HTTP: '#0000ff',
     };
 
     constructor(level: LogType, logOptions?: LogOptions) {
@@ -26,11 +26,26 @@ class Logger {
     }
 
     public log(...message: string[]): void {
-        let log: string = `${generateTimestamp()} ${getStack()} ${
-            this.logType
-        } ${message.join('')}`;
+        let log: string[] = [];
 
-        console.log(log);
+        if (this.options.timestamp) {
+            log.push(`[${generateTimestamp()}]`);
+        }
+        if (this.options.stack) {
+            log.push(`[${getStack()}]`);
+        }
+
+        const base: string = log.join(' ');
+
+        // console.log()
+
+        const logLevel: string = chalk
+            .bgHex(this.colors[this.logType])
+            .bold(`${this.logType}`);
+
+        const formatted: string = `${base} ${logLevel} ${message.join('')}`;
+
+        console.log(formatted);
     }
 }
 
